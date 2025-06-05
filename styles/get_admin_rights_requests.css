@@ -1,0 +1,78 @@
+.external-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #001D5B;
+    margin-top: 140px;
+}
+
+.feed-header{
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
+}
+
+.feed-name{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.feed-filter{
+    padding: 3px;
+    border-color: #001D5B;
+    color: #001D5B;
+}
+
+.error-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 150px;
+    background-color: #f0f0f0;
+    margin-top: 15px;
+    border: 1px solid #b8b8b8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-request{
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    background-color: #e4e4e4;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: 1px solid #001D5B;
+    text-decoration: none;
+    color:#001D5B;
+    padding: 10px;
+}
+
+.admin-button{
+    color: #001D5B;
+    text-decoration: none;
+    background-color: white;
+    padding: 6px;
+    border: 1px solid #b8b8b8;
+    margin-right: 10px;
+    transition: background-color 0.1s;
+}
+
+.admin-button:hover{
+    background-color: #9f9f9f;
+}
+
+.user-email{
+    margin-right: 10px;
+}
+
+@media print{
+    .feed-name, .feed-filter, .page-index-buttons-container{
+        display: none;
+    }
+}

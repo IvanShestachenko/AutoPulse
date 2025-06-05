@@ -1,0 +1,130 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f4f4f4;
+    color: #001D5B;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.logo-reg-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #001D5B;
+    border-radius: 4px;
+}
+
+.logo-reg-img {
+    height: 100%;   
+    width: auto;
+}
+
+.auth-container{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header ~ .auth-container{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-link a {
+    color: #427eff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #001D5B;
+}
+
+input:focus, select:focus {
+    border-color: #001D5B;
+    outline: none;
+}
+
+.info {
+    font-size: 12px;
+    color:#001D5B;
+}
+
+.error {
+    font-size: 12px;
+    color:red;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #001D5B;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: rgb(0, 30, 91, 0.8);
+}
+
+.hidden {
+    display: none;
+}
+
+@media print{
+    .btn-login {
+        display: none;
+    }
+
+}

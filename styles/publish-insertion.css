@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: #001D5B;
+}
+.form-container {
+    width: 800px;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    border: 1px solid #b8b8b8;
+    border-radius: 8px;
+    margin-top: 100px;
+}
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.form-group input, .form-group select, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #001D5B;
+}
+
+.form-group select:disabled{
+    color:#5a5a5a
+}
+
+.form-group select:disabled:hover{
+    border-color: #ccc;
+}
+
+.form-group input:hover, .form-group select:hover, .form-group textarea:hover {
+    border-color: rgb(0, 30, 91, 0.8);
+}
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+.form-footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.form-footer button {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: white;
+    background-color: #001D5B;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.form-footer button:hover {
+    background-color: rgb(0, 30, 91, 0.8);
+}
+.photo-upload {
+    grid-column: 1 / -1;
+}
+.photo-upload input[type="file"] {
+    padding: 8px;
+    width: 530px;
+    background-color: white;
+}
+.info {
+    font-size: 12px;
+    color:#001D5B;
+}
+.error {
+    font-size: 12px;
+    color:red;
+}
+.hidden{
+    display: none;
+}

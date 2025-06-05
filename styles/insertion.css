@@ -1,0 +1,137 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #001D5B;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 100px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 29, 91, 0.5);
+    border: none;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+.insertion_info_container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid #b8b8b8;   
+}
+
+.insertion_header_first_line{
+    display: flex;
+    align-items: flex-end;
+}
+
+.insertion_name{
+    margin-right: 5px;  
+    font-weight: 600;
+    font-size: 20px;   
+}
+
+.insertion_short_description{
+    font-size: 18px;
+}
+
+.insertion_header_second_line{
+    display: flex;
+}
+
+.insertion_header_second_line_entry{
+    margin-top: 5px;
+    font-size: 14px;
+    color:#282828;
+    margin-right: 3px;
+}
+
+.insertion_price{
+    margin-top: 10px;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.insertion_info_entry{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 4px;
+}
+
+.insertion_info_label{
+    font-weight: 600;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.insertion-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+.insertion-button {
+    text-decoration: none;
+    color: white;
+    background-color: #001D5B;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.insertion-button:hover {
+    background-color: rgb(0, 30, 91, 0.8);
+}
+
+.insertion-button-disabled {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(6, 39, 105, 0.8);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: not-allowed;
+}
+
+@media print{
+    .insertion-buttons {
+        display: none;
+    }
+}

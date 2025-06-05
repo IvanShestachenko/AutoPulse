@@ -1,0 +1,146 @@
+* {
+    margin: 0vw;
+    padding: 0vw;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px;
+    border-bottom-color: #001D5B;
+    border-bottom-style: solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo-link {
+    align-self: center;
+    height: 85%;
+    width: auto;
+    cursor: pointer;
+    margin: 4% 0.2%;
+}
+
+.logo-img {
+    height: 100%;   
+    width: auto;
+}
+
+.header-buttons-container{
+    display: flex;
+}
+
+.header-button{
+    color: #001D5B;
+    text-decoration: none;
+    font-size: 16px;
+    height: 100%;
+    padding: 19px 15px;
+    padding-left: 7px;
+}
+
+.header-button:hover{
+    text-decoration: underline;
+}
+
+.popupOverlay-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-Items: center;
+}
+
+.popupWindow-header{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 160px;
+    background-color: white;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #001D5B;
+}
+
+.close-container-header{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30px;
+    color: #001D5B;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #001D5B;
+}
+
+.closeButton-header{
+    height: 100%;
+    font-size: 19px;
+    font-weight: 100;
+    cursor: pointer;
+    padding: 0px 5px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #001D5B;
+    border-top-right-radius: 6px;
+
+}
+
+.closeButton-header:hover{
+    background-color: rgb(215, 215, 215);
+    border-top-right-radius: 6px;
+}
+
+.popupWindow-header > p{
+    text-align: center;
+    margin-top: 30px;
+    color: #001D5B;
+}
+
+.registerButton-header{
+    margin-top: 25px;
+    width: 36%;
+    height: 40px;
+    padding: 10px 10px;
+    text-align: center;
+    align-self: center;
+    background-color: white;
+    color:#001D5B;
+    text-decoration: none;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color:#001D5B;
+    border-style: solid;
+    cursor: pointer;
+}
+.registerButton-header:hover{
+    background-color: rgb(215, 215, 215);
+}
+
+@media print{
+    .header-buttons-container, .popupOverlay-header{
+        display: none;
+    }
+}

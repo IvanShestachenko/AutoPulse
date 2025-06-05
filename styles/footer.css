@@ -1,0 +1,27 @@
+.footer-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end; 
+  flex-grow: 1; 
+  margin-top: 30px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+footer {
+    background-color: #001D5B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
