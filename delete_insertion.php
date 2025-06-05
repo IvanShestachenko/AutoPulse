@@ -25,13 +25,41 @@ if (isset($error)){
     terminateDeleteInsertion("db_access_failed");
 }
 
-$id = $_GET['id']; /**< @var int ID of the insertion to delete. */
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0; /**< @var int ID of the insertion to delete. */
+$mediaDir = 'media/';
+$avatarDir = 'avatar/';
 
 try {
+    // Retrieve the value of filepath to the avatar of the insertion that's being deleted
+    $stmt_avatar_select = $pdo->prepare("SELECT `avatar_path` FROM insertions WHERE id = :id");
+    $stmt_avatar_select->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt_avatar_select->execute();
+    $avatar_path = $stmt_avatar_select->fetchColumn();
+
+    // Remove the file of the avatar image of the insertion
+    $avatarFile = $avatarDir . $avatar_path;
+    if (file_exists($avatarFile)) {
+        unlink($avatarFile); 
+    }
+
+    // Retrieve the values of filepathes to all the images of the insertion that's being deleted
+    $stmt_media_select = $pdo->prepare("SELECT `image_path` FROM images WHERE insertion_id = :id");
+    $stmt_media_select->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt_media_select->execute();
+    $media_pathes = $stmt_media_select->fetchAll(PDO::FETCH_COLUMN);
+
+    // Remove the files of all the images of the insertion
+    foreach ($media_pathes as $file) {
+        $filePath = $mediaDir . $file;
+        if (file_exists($filePath)) {
+            unlink($filePath); 
+        }
+    }
+
     // Prepare and execute the delete query
-    $stmt = $pdo->prepare("DELETE FROM insertions WHERE id = :id");
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
+    $stmt_insertion_delete = $pdo->prepare("DELETE FROM insertions WHERE id = :id");
+    $stmt_insertion_delete->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt_insertion_delete->execute();
 } catch (PDOException $e) {
     // Redirect to the main page if the deletion fails
     terminateDeleteInsertion("delete_insertion_deletion_failed");
