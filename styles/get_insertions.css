@@ -112,6 +112,11 @@ img{
     font-size: 15px;
 }
 
+.insertion-seller{
+    margin-top: 12px;
+    font-size: 14px;
+}
+
 .page-index-buttons-container{
     display: flex;
     margin-top: 30px;
