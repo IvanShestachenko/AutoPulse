@@ -86,9 +86,9 @@ function validateConfirmPassword() {
 }
 
 const fields = [
-    {id: "first-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/, emptyErrorID: "firstname-empty", wrongFormatErrorID: "firstname-wrongformat"},
-    {id: "last-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/, emptyErrorID: "lastname-empty", wrongFormatErrorID: "lastname-wrongformat"},
-    {id: "company-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\- ]{2,20}$/, emptyErrorID: "companyname-empty", wrongFormatErrorID: "companyname-wrongformat"},
+    {id: "first-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ. \-]{2,20}$/, emptyErrorID: "firstname-empty", wrongFormatErrorID: "firstname-wrongformat"},
+    {id: "last-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ. \-]{2,20}$/, emptyErrorID: "lastname-empty", wrongFormatErrorID: "lastname-wrongformat"},
+    {id: "company-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ., \- ]{2,30}$/, emptyErrorID: "companyname-empty", wrongFormatErrorID: "companyname-wrongformat"},
     {id: "email", pattern: /^[a-z0-9._]+@[a-z0-9.]+\.[a-z0-9]{2,8}$/, emptyErrorID: "email-empty", wrongFormatErrorID: "email-wrongformat"},
     {id: "password", pattern: /^(?=.*[0-9])(?=.*[!@#$%^&*-_])[a-zA-Z0-9!@#$%^&*-_]{8,32}$/, emptyErrorID: "password-empty", wrongFormatErrorID: "password-wrongformat"}
 ];

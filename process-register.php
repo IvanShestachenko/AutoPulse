@@ -55,7 +55,7 @@ $confirm_password = $_POST['confirm_password'] ?? ''; ///< Confirmation of the p
 $patterns = [
     'first_name' => '/^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/', ///< Regex for first name validation.
     'last_name' => '/^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/', ///< Regex for last name validation.
-    'company_name' => '/^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\- ]{2,20}$/', ///< Regex for company name validation.
+    'company_name' => '/^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ., \- ]{2,30}$/', ///< Regex for company name validation.
     'email' => '/^[a-z0-9._]+@[a-z0-9.]+\.[a-z0-9]{2,8}$/', ///< Regex for email validation.
     'password' => '/^(?=.*[0-9])(?=.*[!@#$%^&*-_])[a-zA-Z0-9!@#$%^&*-_]{8,32}$/' ///< Regex for password validation.
 ];

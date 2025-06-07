@@ -111,7 +111,7 @@ if ($mode === "main_page" && $error === null){
         $row_count = $stmt_count->fetch(PDO::FETCH_ASSOC);
         $total_number_of_records = $row_count['record_count'];
 
-        $stmt = $pdo->prepare("SELECT id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE insertion_status = :insertion_status ORDER BY id DESC LIMIT 10 OFFSET $offset");
+        $stmt = $pdo->prepare("SELECT id, seller_id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE insertion_status = :insertion_status ORDER BY id DESC LIMIT 10 OFFSET $offset");
         $stmt->bindParam(':insertion_status', $insertion_status, PDO::PARAM_STR);
         $stmt->execute();
         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -171,7 +171,7 @@ elseif($mode === "admin" && $error === null){
             $row_count = $stmt_count->fetch(PDO::FETCH_ASSOC);
             $total_number_of_records = $row_count['record_count'];
 
-            $stmt = $pdo->prepare("SELECT id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE insertion_status = :insertion_status ORDER BY id DESC LIMIT 10 OFFSET $offset");
+            $stmt = $pdo->prepare("SELECT id, seller_id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE insertion_status = :insertion_status ORDER BY id DESC LIMIT 10 OFFSET $offset");
             $stmt->bindParam(':insertion_status', $insertion_status, PDO::PARAM_STR);
             $stmt->execute();
             $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -224,7 +224,7 @@ elseif($mode === "default" && $error === null){
             $row_count = $stmt_count->fetch(PDO::FETCH_ASSOC);
             $total_number_of_records = $row_count['record_count'];
 
-            $stmt = $pdo->prepare("SELECT id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE make = :make AND model = :model AND insertion_status = :insertion_status ORDER BY {$filter_property} {$order} LIMIT 10 OFFSET $offset");
+            $stmt = $pdo->prepare("SELECT id, seller_id, model, make, short_description, price, year, mileage, avatar_path FROM insertions WHERE make = :make AND model = :model AND insertion_status = :insertion_status ORDER BY {$filter_property} {$order} LIMIT 10 OFFSET $offset");
             $stmt->bindParam(':make', $_GET['make'], PDO::PARAM_STR);
             $stmt->bindParam(':model', $_GET['model'], PDO::PARAM_STR);
             $stmt->bindParam(':insertion_status', $insertion_status, PDO::PARAM_STR);
@@ -234,10 +234,42 @@ elseif($mode === "default" && $error === null){
             $error = "gi_getdata_failed";
         }
     }
-
     if ($error !== "gi_wrong_model_or_make_request"){ $feed_name = "Vyhledávání: " . $_GET['make'] . " " . $_GET['model']; }
     else { $feed_name = "Chyba vyhledávání";}
 }
+if ($mode !== "personal" && $error === null){
+    try {
+        foreach ($records as &$record) {
+            $sellerStmt = $pdo->prepare("SELECT person_type, company_name 
+                                        FROM users 
+                                        WHERE id = :seller_id 
+                                        LIMIT 1");
+            $sellerStmt->bindParam(':seller_id', $record['seller_id'], PDO::PARAM_INT);
+            $sellerStmt->execute();
+            $seller = $sellerStmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($seller) {
+                if ($seller['person_type'] === 'company') {
+                    $record['seller_name'] = $seller['company_name'];
+                } elseif ($seller['person_type'] === 'private') {
+                    $record['seller_name'] = 'Soukromý prodejce';
+                } else {
+                    $record['seller_name'] = 'Neznámý prodejce';
+                }
+            } else {
+                $record['seller_name'] = 'Neznámý prodejce';
+            }
+        }
+    } catch (PDOException $e) {
+        $error = "gi_getdata_failed";
+    }
+}
+
+foreach ($records as &$record) {
+    $record['price'] = number_format((int)$record['price'], 0, "", " ");
+    $record['mileage'] = number_format((int)$record['mileage'], 0, "", " ");
+}
+unset($record)
 ?>
 
 <!DOCTYPE html>
@@ -314,6 +346,9 @@ elseif($mode === "default" && $error === null){
                         echo '        <div class="insertion-price">' . htmlspecialchars($records[$i]['price'], ENT_QUOTES, 'UTF-8') . " Kč" . '</div>';
                         if ($mode === "personal") {
                             echo '        <div class="insertion-status">Status: ' . htmlspecialchars($records[$i]['insertion_status'], ENT_QUOTES, 'UTF-8') . '</div>';
+                        }
+                        else {
+                            echo '        <div class="insertion-seller">' . htmlspecialchars($records[$i]['seller_name'], ENT_QUOTES, 'UTF-8') . '</div>';
                         }
                         echo '    </div>';
                         echo '</a>';
