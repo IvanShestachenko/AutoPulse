@@ -146,6 +146,32 @@ if ($mode == "user"){
         terminateInsertion("ins_getdata_failed");
     }
 }
+
+try {
+    $sellerStmt = $pdo->prepare("SELECT person_type, company_name 
+                                FROM users 
+                                WHERE id = :seller_id 
+                                LIMIT 1");
+    $sellerStmt->bindParam(':seller_id', $insertion['seller_id'], PDO::PARAM_INT);
+    $sellerStmt->execute();
+    $seller = $sellerStmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($seller) {
+        if ($seller['person_type'] === 'company') {
+            $insertion['seller_name'] = $seller['company_name'];
+        } elseif ($seller['person_type'] === 'private') {
+            $insertion['seller_name'] = 'Soukromý prodejce';
+        } else {
+            $insertion['seller_name'] = 'Neznámý prodejce';
+        }
+    } else {
+        $insertion['seller_name'] = 'Neznámý prodejce';
+    }
+    
+} catch (PDOException $e) {
+    terminateInsertion("ins_getdata_failed");
+}
+
 $insertion['price'] = number_format((int)$insertion['price'], 0, "", " ");
 $insertion['mileage'] = number_format((int)$insertion['mileage'], 0, "", " ");
 ?>
@@ -179,7 +205,7 @@ $insertion['mileage'] = number_format((int)$insertion['mileage'], 0, "", " ");
                 <div class="insertion_header_second_line_entry"><?php echo htmlspecialchars($insertion['mileage'], ENT_QUOTES, 'UTF-8') . " km"; ?></div>
             </div>
             <div class="insertion_price"><?php echo htmlspecialchars($insertion['price'], ENT_QUOTES, 'UTF-8') . " kč"; ?></div>
-
+            <div class="insertion_seller"><?php echo htmlspecialchars($insertion['seller_name'], ENT_QUOTES, 'UTF-8'); ?></div>
             <div class="insertion_info_entry">
                 <div class="insertion_info_label">Výkon:</div>
                 <div class="insertion_info_value"><?php echo htmlspecialchars($insertion['power'], ENT_QUOTES, 'UTF-8') . " kW"; ?></div>                
