@@ -146,6 +146,8 @@ if ($mode == "user"){
         terminateInsertion("ins_getdata_failed");
     }
 }
+$insertion['price'] = number_format((int)$insertion['price'], 0, "", " ");
+$insertion['mileage'] = number_format((int)$insertion['mileage'], 0, "", " ");
 ?>
 
 <!DOCTYPE html>
