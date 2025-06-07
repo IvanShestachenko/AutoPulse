@@ -264,6 +264,12 @@ if ($mode !== "personal" && $error === null){
         $error = "gi_getdata_failed";
     }
 }
+
+foreach ($records as &$record) {
+    $record['price'] = number_format((int)$record['price'], 0, "", " ");
+    $record['mileage'] = number_format((int)$record['mileage'], 0, "", " ");
+}
+unset($record)
 ?>
 
 <!DOCTYPE html>
