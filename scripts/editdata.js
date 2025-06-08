@@ -65,7 +65,7 @@ function validateConfirmPassword() {
 const fields = [
     {id: "first-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/, emptyErrorID: "firstname-empty", wrongFormatErrorID: "firstname-wrongformat"},
     {id: "last-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\-]{2,20}$/, emptyErrorID: "lastname-empty", wrongFormatErrorID: "lastname-wrongformat"},
-    {id: "company-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ.\- ]{2,20}$/, emptyErrorID: "companyname-empty", wrongFormatErrorID: "companyname-wrongformat"},
+    {id: "company-name", pattern: /^[a-zA-ZčČřŘžŽáÁíÍéÉěĚýÝůŮúÚóÓďĎťŤňŇ., \- ]{2,30}$/, emptyErrorID: "companyname-empty", wrongFormatErrorID: "companyname-wrongformat"},
     {id: "current-password", pattern: /^(?=.*[0-9])(?=.*[!@#$%^&*-_])[a-zA-Z0-9!@#$%^&*-_]{8,32}$/, emptyErrorID: "current-password-empty", wrongFormatErrorID: "current-password-wrongformat"},
     {id: "new-password", pattern: /^(?=.*[0-9])(?=.*[!@#$%^&*-_])[a-zA-Z0-9!@#$%^&*-_]{8,32}$/, emptyErrorID: "new-password-empty", wrongFormatErrorID: "new-password-wrongformat"}
 ];
