@@ -38,8 +38,8 @@ function terminatePublishInsertionWithError($errorParam) {
  * @param string $avatarFile The avatar file to remove.
  */
 function terminateWithRemove($errorParam, $mediaFiles, $avatarFile) {
-    $mediaDir = 'media/';
-    $avatarDir = 'avatar/';
+    $mediaDir = '../media/';
+    $avatarDir = '../avatar/';
 
     foreach ($mediaFiles as $file) {
         $filePath = $mediaDir . $file;
@@ -202,8 +202,8 @@ if (empty($_FILES)) {
 }
 
 // Directory setup for file uploads.
-$uploadDir = __DIR__ . '/media/';
-$avatar_uploadDir = __DIR__ . '/avatar/';
+$uploadDir = __DIR__ . '/../media/';
+$avatar_uploadDir = __DIR__ . '/../avatar/';
 
 if (!is_dir($uploadDir) && !mkdir($uploadDir, 0777, true)) {
     terminatePublishInsertionWithError("publish_insertion_failed");

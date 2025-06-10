@@ -276,7 +276,7 @@ unset($record)
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/get_insertions.css">
+    <link rel='stylesheet' href="../styles/get_insertions.css">
     <title>AutoPulse</title>
 </head>
 <body>
@@ -337,7 +337,7 @@ unset($record)
                     if (count($records) >= $i + 1) {
                         echo '<a href="' . "insertion.php?id=" . htmlspecialchars($records[$i]['id'], ENT_QUOTES, 'UTF-8') . '" class="insertion">';
                         echo '    <div class="insertion-img-container">';
-                        echo '        <img src="' . 'avatar/' . htmlspecialchars($records[$i]['avatar_path'], ENT_QUOTES, 'UTF-8') . '">';
+                        echo '        <img src="' . '../avatar/' . htmlspecialchars($records[$i]['avatar_path'], ENT_QUOTES, 'UTF-8') . '">';
                         echo '    </div>';
                         echo '    <div class="insertion-info-container">';
                         echo '        <div class="insertion-name">' . htmlspecialchars($records[$i]['make'], ENT_QUOTES, 'UTF-8') . " " . htmlspecialchars($records[$i]['model'], ENT_QUOTES, 'UTF-8') . '</div>';
@@ -400,7 +400,7 @@ unset($record)
 
     <?php if($mode !== "main_page" || isset($_GET['page'])){
         include "footer.html";} ?>
-    <script src="scripts/filter_insertions.js" defer></script>
+    <script src="../scripts/filter_insertions.js" defer></script>
 </body>
 </html>
 

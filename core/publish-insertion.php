@@ -2,7 +2,7 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/publish-insertion.css">
+    <link rel='stylesheet' href="../styles/publish-insertion.css">
     <title>AutoPulse</title>
 </head>
 <body>
@@ -131,7 +131,7 @@
         </form>
     </div>
     <?php include "footer.html"; ?>
-    <script src="scripts/make-model-ajax.js" defer></script>
-    <script src="scripts/publish-insertion.js" defer></script>
+    <script src="../scripts/make-model-ajax.js" defer></script>
+    <script src="../scripts/publish-insertion.js" defer></script>
 </body>
 </html>

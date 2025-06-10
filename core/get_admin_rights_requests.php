@@ -95,7 +95,7 @@ try {
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/get_admin_rights_requests.css">
+    <link rel='stylesheet' href="../styles/get_admin_rights_requests.css">
     <title>AutoPulse</title>
 </head>
 <body>

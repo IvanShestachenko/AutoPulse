@@ -87,7 +87,7 @@ if (isset($_GET["error"])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/getDataErrorPopup.css">
+    <link rel='stylesheet' href="../styles/getDataErrorPopup.css">
 </head>
 <body>
     <div class="popupOverlay" id="popUpOverlay">
@@ -102,6 +102,6 @@ if (isset($_GET["error"])){
             </div>
         </div>
     </div>
-    <script src="scripts/authFailurePopUp.js" defer></script>
+    <script src="../scripts/authFailurePopUp.js" defer></script>
 </body>
 </html>

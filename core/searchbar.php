@@ -2,7 +2,7 @@
 <html lang="cz">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/searchbar.css">
+    <link rel='stylesheet' href="../styles/searchbar.css">
 </head>
 <body>
     <?php 
@@ -25,6 +25,6 @@
             <button id="search" class="searchbar-right-button" type="submit" disabled>Vyhledat</button>
         </form>
     </div>
-    <script src="scripts/make-model-ajax.js"></script>
+    <script src="../scripts/make-model-ajax.js"></script>
 </body>
 </html>

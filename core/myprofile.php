@@ -82,7 +82,7 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <link rel='stylesheet' href="styles/myprofile.css">
+    <link rel='stylesheet' href="../styles/myprofile.css">
     <title>AutoPulse</title>
 </head>
 
@@ -91,7 +91,7 @@
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-icon-container">
-                <img class="profile-icon-img" src="logotypes&buttons/user_icon.png">
+                <img class="profile-icon-img" src="../logotypes&buttons/user_icon.png">
             </div>
             <div class="profile-details">
                 <?php if (!($user['first_name'] === null)): ?>   
@@ -119,6 +119,5 @@
         </div>
     </div>
     <?php include 'footer.html'; ?>
-    <!-- <script src="scripts/confirmPopup.js"></script> -->
 </body>
 </html>

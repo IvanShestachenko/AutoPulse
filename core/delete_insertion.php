@@ -26,8 +26,8 @@ if (isset($error)){
 }
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0; /**< @var int ID of the insertion to delete. */
-$mediaDir = 'media/';
-$avatarDir = 'avatar/';
+$mediaDir = '../media/';
+$avatarDir = '../avatar/';
 
 try {
     // Retrieve the value of filepath to the avatar of the insertion that's being deleted

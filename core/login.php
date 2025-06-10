@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>AutoPulse</title>
-    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="../styles/auth.css">
 </head>
 <body>
     <?php
@@ -40,6 +40,6 @@
         </form>
     </div>
     <?php include "footer.html" ?>
-    <script src="scripts/login.js" defer></script>
+    <script src="../scripts/login.js" defer></script>
 </body>
 </html>
