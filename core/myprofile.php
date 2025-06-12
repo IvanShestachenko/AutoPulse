@@ -91,7 +91,7 @@
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-icon-container">
-                <img class="profile-icon-img" src="../logotypes&buttons/user_icon.png">
+                <img class="profile-icon-img" src="../assets/logotypes&buttons/user_icon.png">
             </div>
             <div class="profile-details">
                 <?php if (!($user['first_name'] === null)): ?>   

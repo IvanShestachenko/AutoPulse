@@ -189,7 +189,7 @@ $insertion['mileage'] = number_format((int)$insertion['mileage'], 0, "", " ");
         <div class="carousel">
             <div class="carousel-images">
                 <?php foreach ($images as $image): ?>
-                    <img src="<?php echo "../media/" . htmlspecialchars($image['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="Obrázek inzerátu">
+                    <img src="<?php echo "../assets/media/" . htmlspecialchars($image['image_path'], ENT_QUOTES, 'UTF-8'); ?>" alt="Obrázek inzerátu">
                 <?php endforeach; ?>
             </div>
             <button class="carousel-button prev">&#10094;</button>

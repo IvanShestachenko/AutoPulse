@@ -17,7 +17,7 @@
     if (isset($_GET["error"]) && $_GET['error'] != "reg_email_taken"){
                 include "authFailurePopUp.php";} ?>
     <a href="index.php" class="logo-reg-link">
-                <img class="logo-reg-img" src="../logotypes&buttons/logo7.webp" alt="AutoPulse Logo"></a>
+                <img class="logo-reg-img" src="../assets/logotypes&buttons/logo7.webp" alt="AutoPulse Logo"></a>
     <div class="auth-container">
         <h1>Registrace</h1>
         <p class="login-link">Již máte účet? <a href="login.php">Přihlásit se</a></p>

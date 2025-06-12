@@ -13,7 +13,7 @@
          */
         ?>
         <a href="index.php" class="logo-link">
-            <img class="logo-img" src="../logotypes&buttons/logo7.webp" alt="AutoPulse Logo">
+            <img class="logo-img" src="../assets/logotypes&buttons/logo7.webp" alt="AutoPulse Logo">
         </a>
         <div class=".header-buttons-container">
             <a class="header-button" id="publishInsertionLink" href="publish-insertion.php">+Přidat inzerát</a>
