@@ -16,7 +16,7 @@ Live deployment is available at:
 
 The project was created without the use of frameworks or third-party libraries — per course constraints — using only **vanilla PHP, JavaScript, HTML, and CSS**. This was done intentionally, as the aim of the course was to get hands-on experience with the low-level mechanisms that frameworks usually abstract away and handle “under the hood.”
 
-The project uses **server-side rendering** (the author would have gladly experimented with the REST approach instead) and was built with **MySQL** as the database and tested using **Apache (XAMPP package)**.
+The project uses **server-side rendering** (I would have gladly experimented with the REST approach instead) and was built with **MySQL** as the database and tested using **Apache (XAMPP package)**.
 
 
 The design was mostly inspired by platforms such as **sauto.cz** and similar automotive portals. The project does not contain a whole load of features, while, however, fully satisfying all of the 30+ course requirements — such as:
@@ -29,7 +29,7 @@ The design was mostly inspired by platforms such as **sauto.cz** and similar aut
 - etc.
 
 The triviality of the applied stack, architecture and overall concept is what limits further development of the platform. 
-Instead, the author would be glad to invest his effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.
+Instead, I would be glad to invest his effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.
 
 ---
 
