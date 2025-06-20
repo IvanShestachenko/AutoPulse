@@ -40,11 +40,11 @@ The root directory of the project contains the following folders:
 | Folder               | Description |
 |----------------------|-------------|
 | `assets/avatar/`            | Stores cropped thumbnail images for listings (currently those belonging to the demo user). |
-| `core/`              | Contains all PHP and HTML code. Server-side rendering is used, so there is no strict front-end/back-end separation. |
-| `assets/demo-db.sql/`           | A script that generates the demo project database with all the tables, containing the demo user and his listings. |
-| `assets/doxygen/html/`      | Contains generated technical documentation files. |
-| `assets/logotypes&buttons/` | Stores static UI images (logos, buttons, etc.). |
 | `assets/media/`             | Stores full-size images of car listings, including those of the demo user. |
+| `assets/logotypes&buttons/` | Stores static UI images (logos, buttons, etc.). |
+| `assets/doxygen/html/`      | Contains generated technical documentation files. |
+| `assets/demo-db.sql/`           | A script that generates the demo project database with all the tables, containing the demo user and his listings. |
+| `core/`              | Contains all PHP and HTML code. Server-side rendering is used, so there is no strict front-end/back-end separation. |
 | `scripts/`           | Contains all JavaScript files. |
 | `styles/`            | Contains all CSS styles. |
 
