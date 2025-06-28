@@ -29,7 +29,7 @@ The design was mostly inspired by platforms such as **sauto.cz** and similar aut
 - etc.
 
 The triviality of the applied stack, architecture and overall concept is what limits further development of the platform. 
-Instead, I would be glad to invest his effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.
+Instead, I would be glad to invest my effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.
 
 ---
 
