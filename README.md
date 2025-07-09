@@ -1,6 +1,6 @@
 # AutoPulse
 
-**AutoPulse** is a small-scale web platform for selling new and used vehicles, developed as a coursework project for the subject **FEL CTU B6B39ZWA – Fundamentals of Web Applications**.
+**AutoPulse** is a small-scale web platform intended for the new and used vehicles online sales, developed as a solo coursework project within the subject of **CTU FEE B6B39ZWA – Fundamentals of Web Applications**.
 
 Live deployment is available at:  
 [AutoPulse online instance](https://zwa.toad.cz/~shestiva/autopulse/core/index.php)
@@ -28,8 +28,8 @@ The design was mostly inspired by platforms such as **sauto.cz** and similar aut
 - application of the PRG (Post/Redirect/Get) principle;
 - etc.
 
-The triviality of the applied stack, architecture and overall concept is what limits further development of the platform. 
-Instead, I would be glad to invest my effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.
+***The triviality of the applied technology stack, architecture and overall concept is what limits further development of the platform. 
+Instead, I would be eager to invest my effort into a more sophisticated project using technologies and tools that are closer to actual commercial production environments.***
 
 ---
 
@@ -67,4 +67,4 @@ Development originally took place on the university’s internal GitLab. The cur
 
 ## Author
 
-**Ivan Shestachenko, 2025, B6B39ZWA @ FEL CTU**
+**Ivan Shestachenko, 2025, B6B39ZWA @ FEE CTU**
