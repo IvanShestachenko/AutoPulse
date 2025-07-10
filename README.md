@@ -1,6 +1,6 @@
 # AutoPulse
 
-**AutoPulse** is a small-scale web platform intended for the new and used vehicles online sales, developed as a solo coursework project within the subject of **CTU FEE B6B39ZWA – Fundamentals of Web Applications**.
+**AutoPulse** is a small-scale web platform intended for the online sales of new and used vehicles, developed as a solo coursework project within the subject of **CTU FEE B6B39ZWA – Fundamentals of Web Applications**.
 
 Live deployment is available at:  
 [AutoPulse online instance](https://zwa.toad.cz/~shestiva/autopulse/core/index.php)
