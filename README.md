@@ -54,8 +54,8 @@ The root directory of the project contains the following folders:
 
 Project documentation is available through the project's main page or at the links below:
 
-- 📘 [Technical documentation (Doxygen)](https://zwa.toad.cz/~shestiva/autopulse/core/doxygen/html/index.html)  
 - 📙 [User manual (Google Docs)](https://docs.google.com/document/d/1STvj4TltSsuezUdh32gKZRyjmus9_iT-h9owhwQnyis/edit?usp=sharing)
+- 📘 [Technical documentation (Doxygen)](https://zwa.toad.cz/~shestiva/autopulse/core/doxygen/html/index.html)  
 
 ---
 
