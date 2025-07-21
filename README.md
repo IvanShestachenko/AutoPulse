@@ -1,6 +1,6 @@
 # AutoPulse
 
-**AutoPulse** is a small-scale web platform intended for online sales of the new and used vehicles, developed as a solo coursework project within the subject of **CTU FEE B6B39ZWA – Fundamentals of Web Applications**.
+**AutoPulse** is a small-scale web platform intended for online sales of the new and used vehicles, developed as a solo coursework project within  **CTU FEE B6B39ZWA – Fundamentals of Web Applications** university course.
 
 Live deployment is available at:  
 [AutoPulse online instance](https://zwa.toad.cz/~shestiva/autopulse/core/index.php)
@@ -24,7 +24,8 @@ The design was mostly inspired by platforms such as **sauto.cz** and similar aut
 - different functionality for multiple user roles;  
 - correct pagination;  
 - AJAX integration;  
-- protection against XSS and SQL injections;  
+- protection against XSS and SQL injections;
+- frontend & backend validation of all the submitted data forms;  
 - application of the PRG (Post/Redirect/Get) principle;
 - etc.
 
@@ -43,7 +44,7 @@ The root directory of the project contains the following folders:
 | `assets/media/`             | Stores full-size images of car listings, including those of the demo user. |
 | `assets/logotypes&buttons/` | Stores static UI images (logos, buttons, etc.). |
 | `assets/doxygen/html/`      | Contains generated technical documentation files. |
-| `assets/demo-db.sql/`           | A script that generates the demo project database with all the tables, containing the demo user and his listings. |
+| `assets/demo-db.sql/`       | A script that generates the demo project database with all the tables, containing the demo user and his listings. |
 | `core/`              | Contains all PHP and HTML code. Server-side rendering is used, so there is no strict front-end/back-end separation. |
 | `scripts/`           | Contains all JavaScript files. |
 | `styles/`            | Contains all CSS styles. |
