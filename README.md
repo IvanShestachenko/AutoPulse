@@ -10,6 +10,8 @@ Live deployment is available at:
 > **Email:** `sales@apexautogroup.cz`  
 > **Password:** `mebnwdo-700`
 
+![Demo image of the platform's interface](assets/interface_screenshot.png)
+
 ---
 
 ## Overview
